@@ -101,6 +101,7 @@ func (s *catalogueService) List(tags []string, order string, pageNum, pageSize i
 	for i, s := range socks {
 		socks[i].ImageURL = []string{s.ImageURL_1, s.ImageURL_2}
 		socks[i].Tags = strings.Split(s.TagString, ",")
+		socks[i].Name = socks[i].Name + " ***"
 	}
 
 	// DEMO: Change 0 to 850
